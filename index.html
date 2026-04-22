@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blank Template · Latin Pages</title>
+  <title>Dev Diary</title>
   <link rel="stylesheet" href="/DevDiary/style.css">
+  <title>Dev Diary!!!</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -16,7 +18,7 @@
     struggles to the successes, the ideas to the implementation. While we may not have created the greatest game in the world, 
     I definitely learned a lot from doing this and had a lot of fun.
     <div>
-    Link to the game and github repo are here:
+    Links to the game and github repo are here:
 
     <div>Github: <a href="https://github.com/Snablet/eZcape">https://github.com/Snablet/eZcape</a></div>
     <div>Game: <a href="https://lastcell.itch.io/ezcape">https://lastcell.itch.io/ezcape</a></div>
@@ -37,60 +39,125 @@
 
     <a href="page3.html" class="link-card" rel="noopener noreferrer">
       <div class="card-title">Entry #3</div>
-      <div class="card-desc">Ut enim ad minim veniam, quis nostrud exercitation.</div>
+      <div class="card-desc">Creating a zombie AI. (or at least attempting to), and other things</div>
     </a>
 
     <a href="page4.html" class="link-card" rel="noopener noreferrer">
       <div class="card-title">Entry #4</div>
-      <div class="card-desc">Duis aute irure dolor in reprehenderit in voluptate velit.</div>
+      <div class="card-desc">PRODUCTIVENESS!! Tasks assigned, github set up, more player controls and live recording!!!</div>
     </a>
     
     <a href="page5.html" class="link-card" rel="noopener noreferrer">
       <div class="card-title">Entry #5</div>
-      <div class="card-desc">Duis aute irure dolor in reprehenderit in voluptate velit.</div>
+      <div class="card-desc">Catching up on some work and a working iteration of the zombie AI</div>
     </a>
 
     <a href="page6.html" class="link-card" rel="noopener noreferrer">
       <div class="card-title">Entry #6</div>
-      <div class="card-desc">Duis aute irure dolor in reprehenderit in voluptate velit.</div>
+      <div class="card-desc">Presentation preparation and perfect rooms produced...</div>
     </a>
 
     <a href="page7.html" class="link-card" rel="noopener noreferrer">
       <div class="card-title">Entry #7</div>
-      <div class="card-desc">Duis aute irure dolor in reprehenderit in voluptate velit.</div>
+      <div class="card-desc">Zombie AI improvement: radius'. Also some game audio previews</div>
     </a>
 
     <a href="page8.html" class="link-card" rel="noopener noreferrer">
       <div class="card-title">Entry #8</div>
-      <div class="card-desc">Duis aute irure dolor in reprehenderit in voluptate velit.</div>
+      <div class="card-desc">Presentation complete! ft. troubleshooting and artwork</div>
     </a>
 
     <a href="page9.html" class="link-card" rel="noopener noreferrer">
       <div class="card-title">Entry #9</div>
-      <div class="card-desc">Duis aute irure dolor in reprehenderit in voluptate velit.</div>
+      <div class="card-desc">Attempting to create zombie spawning. More radius'!!!</div>
     </a>
 
     <a href="page10.html" class="link-card" rel="noopener noreferrer">
       <div class="card-title">Entry #10</div>
-      <div class="card-desc">Duis aute irure dolor in reprehenderit in voluptate velit.</div>
-    </a>
-
-    <a href="page11.html" class="link-card" rel="noopener noreferrer">
-      <div class="card-title">Entry #11</div>
-      <div class="card-desc">Duis aute irure dolor in reprehenderit in voluptate velit.</div>
-    </a>
-
-    <a href="page12.html" class="link-card" rel="noopener noreferrer">
-      <div class="card-title">Entry #12</div>
-      <div class="card-desc">Duis aute irure dolor in reprehenderit in voluptate velit.</div>
-    </a>
-
-    <a href="page13.html" class="link-card" rel="noopener noreferrer">
-      <div class="card-title">Entry #13</div>
-      <div class="card-desc">Duis aute irure dolor in reprehenderit in voluptate velit.</div>
+      <div class="card-desc">At long long last...</div>
     </a>
   </div>
 </div>
+  
+  <div class="banner-container">
+    <h3 class="banner-title">Images from our development process</h3>
+    <div class="marquee-wrapper">
+      <div class="marquee-track" id="marqueeTrack"></div>
+    </div>
+  </div>
+</div>
+<script>
+const screenshotFiles = [];
+//change 12 to number of images
+for (let i = 1; i <= 17; i++) {
+  screenshotFiles.push(`/assets/images/${i}.png`);
+}
 
+const marqueeTrack = document.getElementById("marqueeTrack");
+let lastRandomIndex = -1;
+
+function getRandomImage() {
+  let randomIndex = Math.floor(Math.random() * screenshotFiles.length);
+  
+  while (randomIndex === lastRandomIndex) {
+    randomIndex = Math.floor(Math.random() * screenshotFiles.length);
+  }
+  
+  lastRandomIndex = randomIndex;
+  return screenshotFiles[randomIndex];
+}
+
+function createImageElement(src) {
+  const img = document.createElement("img");
+  img.src = src;
+  img.alt = "Development screenshot";
+  img.loading = "lazy";
+  return img;
+}
+//change number to the amount of images you want it to be scrolling through at once
+const numberOfImages = 30;
+
+for (let i = 0; i < numberOfImages; i++) {
+  const randomImage = getRandomImage();
+  const img = createImageElement(randomImage);
+  marqueeTrack.appendChild(img);
+}
+
+for (let i = 0; i < numberOfImages; i++) {
+  const randomImage = getRandomImage();
+  const img = createImageElement(randomImage);
+  marqueeTrack.appendChild(img.cloneNode(true));
+}
+
+setInterval(() => {
+  const allImages = marqueeTrack.querySelectorAll("img");
+  const numberOfImagesToReplace = Math.floor(Math.random() * 5) + 3;
+  
+  for (let i = 0; i < numberOfImagesToReplace; i++) {
+    const randomImageIndex = Math.floor(Math.random() * allImages.length);
+    const newRandomImage = getRandomImage();
+    allImages[randomImageIndex].src = newRandomImage;
+  }
+}, 5000);
+
+let scrollPosition = 0;
+//change scroll speed here (higher=faster)
+const scrollSpeed = 1.5;
+
+function scrollMarquee() {
+  scrollPosition -= scrollSpeed;
+  marqueeTrack.style.transform = `translateX(${scrollPosition}px)`;
+  
+  const trackWidth = marqueeTrack.scrollWidth / 2;
+  
+  if (Math.abs(scrollPosition) >= trackWidth) {
+    scrollPosition = 0;
+  }
+  
+  requestAnimationFrame(scrollMarquee);
+}
+
+scrollMarquee();
+</script>
 </body>
 </html>

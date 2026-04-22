@@ -3,30 +3,62 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tertia Pagina · Lorem Ipsum</title>
+    <title>Entry #3</title>
     <link rel="stylesheet" href="style.css">
     <style>
       .page-container { max-width: 900px; margin: 2rem auto; background: white; border-radius: 2rem; box-shadow: 0 12px 30px rgba(0,0,0,0.05); padding: 2rem; }
-      .page-title { font-size: 2.2rem; font-weight: 700; color: #1f3b4c; margin-bottom: 0.5rem; }
-      .page-sub { color: #3a5b6e; border-left: 4px solid #9bb8d0; padding-left: 1rem; margin: 1rem 0 1.5rem 0; font-style: italic; }
-      .latin-sample { background: #f9fbfd; padding: 1.2rem; border-radius: 1rem; border-left: 3px solid #9bb8d0; line-height: 1.6; margin: 1.5rem 0; }
-      .back-link { display: inline-block; margin-top: 2rem; padding: 0.6rem 1.2rem; background: #eef2f6; border-radius: 2rem; text-decoration: none; color: #1f3b4c; font-weight: 500; transition: background 0.2s; }
-      .back-link:hover { background: #dfe6ed; }
+    .page-title { font-size: 2.2rem; font-weight: 700; color: #1f3b4c; margin-bottom: 0.5rem; padding-bottom: 0.75rem; border-bottom: 3px solid #1f3b4c; display: inline-block; }
+    .latin-sample { background: transparent; padding: 0; border-left: none; line-height: 1.6; margin: 1.5rem 0; }
+    .back-link { display: inline-block; margin-top: 2rem; padding: 0.6rem 1.2rem; background: #eef2f6; border-radius: 2rem; text-decoration: none; color: #1f3b4c; font-weight: 500; transition: background 0.2s; }
+    .back-link:hover { background: #dfe6ed; }
     </style>
   </head>
   <body>
     <div class="page-container">
-      <h1 class="page-title">Tertia Pagina</h1>
-      <div class="page-sub">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</div>
+      <h1 class="page-title">Entry #3</h1>
       <div class="latin-sample">
-        <strong>📜 Lorem ipsum (extended):</strong><br><br>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        <strong>Third log: 18/02/26</strong><br><br>
+        So from the plan we had made (shown in the previous log), I wanted to first create an AI for our zombies so that 
+        they would track the player wherever they were on the map. Now I had no idea the treat I was in for trying to 
+        make this. Looking back on it, coming from zero experience with coding a game I think 
+        creating a zombie AI might have been a bit too ambitious, for me at least. Before I was even able to open the Unity 
+        editor, I already encountered an issue. I have recently switched to linux for the first time and am still quite clueless 
+        to how it works, so getting a working unity editor was the first hurdle! Eventually I did get it to work though, 
+        and I begun working on the AI. As a start, I followed various youtube tutorials on making a zombie AI in 3D games in Unity. 
+        <div>
+        These are the 2 youtube videos I tried out:
+        </div>
+        <div>
+          <a href="https://www.youtube.com/watch?v=UjkSFoLxesw&t" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=UjkSFoLxesw&t</a><br>
+        </div>
+        <div>
+          <a href="https://www.youtube.com/watch?v=yai-RscB8FA&t" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=yai-RscB8FA&t</a><br>
+        </div>
+        <div>
+          The "issue" I encountered with both of these was getting a player that the zombies would follow. The only reason 
+          I'm calling this an issue is because I got way too caught up with making a working player script so that I could 
+          move and around and test. I unfortuntately didn't get the zombie AI done today but I did get working player 
+          movement! This will hopefully make future testing more useful...
+        </div>
       </div>
       <div class="latin-sample">
-        <strong>✍️ Sample filler text:</strong><br><br>
-        Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus. Donec mollis hendrerit risus. Cras non dolor.
+        <strong>Other progress:</strong><br>
+        In other news during our meeting today, one of our coders implemented basic player movement and dodging! The dodge is just a simple 
+        roll but quite impressive for a first iteration in my opinion.
+        <img src="assets/dodge.gif" alt="dodge" style="width:800px;height:450px;">
       </div>
-      <a href="index.html" class="back-link">← Back to Home</a>
+      <div>
+        Ont top of that, one of our artists had done some basic sketches of various GUI elements that will be seen throughout the game. 
+        Although they were only simple sketches it helped give us an idea of how our game would look.
+      </div>
+      <embed src="assets/sampleArt.pdf" type="application/pdf" width="100%" height="600px" />
+      
+      <div class="button-group">
+  <a href="index.html" class="back-link">Back to Home</a>
+  <div class="right-buttons">
+    <a href="page2.html" class="nav-btn">Previous</a>
+    <a href="page4.html" class="nav-btn">Next</a>
+  </div>
     </div>
   </body>
   </html>

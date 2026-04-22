@@ -68,7 +68,7 @@ body {
 }
 
 @media (max-width: 700px) {
-  .links-grid {
+  .links {
     flex-direction: column;
   }
   .link-card {
@@ -77,4 +77,144 @@ body {
   body {
     padding: 1rem;
   }
+}
+
+/* Banner Styles */
+.banner-container {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #e0e4e8;
+  text-align: center;
+}
+
+.banner-title {
+  font-size: 1.3rem;
+  color: #1a3a4a;
+  margin-bottom: 1rem;
+}
+
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background: #f5f7fa;
+  border-radius: 12px;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 20px;
+  width: fit-content;
+}
+
+.marquee-track img {
+  height: 250px;
+  width: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+.marquee-track img:hover {
+  transform: scale(1.05);
+}
+
+.banner-caption {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: #666;
+  font-style: italic;
+}
+
+@keyframes scrollHorizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee-track img {
+    height: 150px;
+  }
+}
+
+/* Page Styles (for diary entries) */
+.page-container { 
+  max-width: 900px; 
+  margin: 2rem auto; 
+  background: #f0f2f5; 
+  border-radius: 2rem; 
+  box-shadow: 0 12px 30px rgba(0,0,0,0.05); 
+  padding: 2rem;
+}
+
+.white-box {
+  background: white;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.page-title { 
+  font-size: 2.2rem; 
+  font-weight: 700; 
+  color: #1f3b4c; 
+  margin-bottom: 0.5rem; 
+  padding-bottom: 0.75rem; 
+  border-bottom: 3px solid #1f3b4c; 
+  display: inline-block; 
+}
+
+.latin-sample { 
+  background: transparent; 
+  padding: 0; 
+  border-left: none; 
+  line-height: 1.6; 
+  margin: 1.5rem 0; 
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e4e8;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.right-buttons {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.back-link, .nav-btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: #eef2f6;
+  border-radius: 2rem;
+  text-decoration: none;
+  color: #1f3b4c;
+  font-weight: 500;
+  transition: background 0.2s;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.back-link:hover, .nav-btn:hover {
+  background: #dfe6ed;
+}
+
+.nav-btn.disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.6;
 }

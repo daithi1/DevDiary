@@ -1,33 +1,42 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prima Pagina · Lorem Ipsum</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-      /* Additional page-specific minimal adjustments */
-      .page-container { max-width: 900px; margin: 2rem auto; background: white; border-radius: 2rem; box-shadow: 0 12px 30px rgba(0,0,0,0.05); padding: 2rem; }
-      .page-title { font-size: 2.2rem; font-weight: 700; color: #1f3b4c; margin-bottom: 0.5rem; }
-      .page-sub { color: #3a5b6e; border-left: 4px solid #9bb8d0; padding-left: 1rem; margin: 1rem 0 1.5rem 0; font-style: italic; }
-      .latin-sample { background: #f9fbfd; padding: 1.2rem; border-radius: 1rem; border-left: 3px solid #9bb8d0; line-height: 1.6; margin: 1.5rem 0; }
-      .back-link { display: inline-block; margin-top: 2rem; padding: 0.6rem 1.2rem; background: #eef2f6; border-radius: 2rem; text-decoration: none; color: #1f3b4c; font-weight: 500; transition: background 0.2s; }
-      .back-link:hover { background: #dfe6ed; }
-    </style>
-  </head>
-  <body>
-    <div class="page-container">
-      <h1 class="page-title">Entry #1</h1>
-      <div class="latin-sample">
-        <strong>First log: 10/02/26</strong><br><br>
-       First log in my dev Diary. Me and my team have a basic idea of what sort of game we want to make. 
-       Unfortuantely right now everyone is busy so we can't really get much progress on the game but we have the lab 
-       tomorrow to work on it. Right now I have a lot of free time so I figured I'll get to understanding the basics of 
-       making a game as I have little experience with doing so. I'm using the tutorial that was put up on brightspace about how 
-       to make flappy bird on unity (which I never did on week 1 oops). Since we are doing our game in Unity, it is definitely 
-       useful to get to know how to use Unity and, again, understanding the basics of making a game specifically using C#. 
-      </div>
-      <a href="index.html" class="back-link">← Back to Home</a>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entry #1</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-container { max-width: 900px; margin: 2rem auto; background: white; border-radius: 2rem; box-shadow: 0 12px 30px rgba(0,0,0,0.05); padding: 2rem; }
+    .page-title { font-size: 2.2rem; font-weight: 700; color: #1f3b4c; margin-bottom: 0.5rem; padding-bottom: 0.75rem; border-bottom: 3px solid #1f3b4c; display: inline-block; }
+    .latin-sample { background: transparent; padding: 0; border-left: none; line-height: 1.6; margin: 1.5rem 0; }
+    .back-link { display: inline-block; margin-top: 2rem; padding: 0.6rem 1.2rem; background: #eef2f6; border-radius: 2rem; text-decoration: none; color: #1f3b4c; font-weight: 500; transition: background 0.2s; }
+    .back-link:hover { background: #dfe6ed; }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <h1 class="page-title">Entry #1</h1>
+    <div class="latin-sample">
+      <strong>First log: 10/02/26</strong><br><br>
+      First log in my dev Diary. Me and my team have a basic idea of what sort of game we want to make. 
+      Unfortunately right now everyone is busy so we can't really get much progress on the game but we have the lab 
+      tomorrow to work on it. Right now I have a lot of free time so I figured I'll get to understanding the basics of 
+      making a game as I have little experience with doing so. I'm using the tutorial that was put up on brightspace about how 
+      to make flappy bird on unity (which I never did on week 1 oops). Since we are doing our game in Unity, it is definitely 
+      useful to get to know how to use Unity and, again, understanding the basics of making a game specifically using C#. 
     </div>
-  </body>
-  </html>
+    <div>
+      <img src="assets/images/flappyBird.png" alt="Flappy Bird" style="width:800px;height:500px;"><br>
+      This is just a screenshot of my first attempt at making a flappy bird "game" following 
+      the tutorial we were given. Although not the greatest thing in the world I was happy to get it done 
+      as it gave me a good learning experience.
+    </div>
+    <div class="button-group">
+  <a href="index.html" class="back-link">Back to Home</a>
+  <div class="right-buttons">
+    <a class="nav-btn disabled">Previous</a>
+    <a href="page2.html" class="nav-btn">Next</a>
+  </div>
+</div>
+</body>
+</html>

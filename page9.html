@@ -3,30 +3,56 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quarta Pagina · Lorem Ipsum</title>
+    <title>Entry #9</title>
     <link rel="stylesheet" href="style.css">
     <style>
       .page-container { max-width: 900px; margin: 2rem auto; background: white; border-radius: 2rem; box-shadow: 0 12px 30px rgba(0,0,0,0.05); padding: 2rem; }
-      .page-title { font-size: 2.2rem; font-weight: 700; color: #1f3b4c; margin-bottom: 0.5rem; }
-      .page-sub { color: #3a5b6e; border-left: 4px solid #9bb8d0; padding-left: 1rem; margin: 1rem 0 1.5rem 0; font-style: italic; }
-      .latin-sample { background: #f9fbfd; padding: 1.2rem; border-radius: 1rem; border-left: 3px solid #9bb8d0; line-height: 1.6; margin: 1.5rem 0; }
-      .back-link { display: inline-block; margin-top: 2rem; padding: 0.6rem 1.2rem; background: #eef2f6; border-radius: 2rem; text-decoration: none; color: #1f3b4c; font-weight: 500; transition: background 0.2s; }
-      .back-link:hover { background: #dfe6ed; }
+    .page-title { font-size: 2.2rem; font-weight: 700; color: #1f3b4c; margin-bottom: 0.5rem; padding-bottom: 0.75rem; border-bottom: 3px solid #1f3b4c; display: inline-block; }
+    .latin-sample { background: transparent; padding: 0; border-left: none; line-height: 1.6; margin: 1.5rem 0; }
+    .back-link { display: inline-block; margin-top: 2rem; padding: 0.6rem 1.2rem; background: #eef2f6; border-radius: 2rem; text-decoration: none; color: #1f3b4c; font-weight: 500; transition: background 0.2s; }
+    .back-link:hover { background: #dfe6ed; }
     </style>
   </head>
   <body>
     <div class="page-container">
-      <h1 class="page-title">Quarta Pagina</h1>
-      <div class="page-sub">Duis aute irure dolor in reprehenderit in voluptate velit esse.</div>
+      <h1 class="page-title">Entry #9</h1>
       <div class="latin-sample">
-        <strong>🌿 Lorem ipsum sample:</strong><br><br>
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+        <strong>Ninth log: 04/04/26</strong><br><br>
+        At this point we basically had an alpha version of our game completed. The next thing I wanted to add was some sort of 
+        spawner for the zombies. The idea would be when you enter a room, the zombies would spawn in random locations in the room.
+        This ended up not being as hard as I thought it was, although maybe I set my expectations really high after the shock of creating 
+        a zombie AI hit me. Going back to my test project I basically set up a trigger. You can move this trigger around quite easily, 
+        so when adding it to the game, all you have to do is simply move it to where the door is or wherever you want it so that when you 
+        pass through that area, the zombies spawn. On top of this, I link a radius to it that you can edit and adjust to whatever size 
+        you want. This radius gives you the area where the zombies can spawn upon entering the trigger. I was also able to make it so that 
+        the zombies can't spawn in places like on top of a pillar or any object in the room, in case they get stuck on spawn. However, 
+        unfortunately my first few attempts didn't exactly work out perfectly:
+        <div>
+          <img src = "/assets/images/failedSpawn.png" alt="failedSpawn" style="width:720px;height:450px;">
+        </div>
+        I'm still not entirely sure what happened here I'm not gonna lie. But I kept at it:
+        <div>
+          <video controls style="width:720px;height:450px;">
+            <source src="/assets/videos/successfulSpawn.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </div>
+        This is just a video showing the spawner actually working. In the image below you can see the spawner trigger, and as well the 
+        radius in which the zombies can spawn in:
+        <div>
+          <img src="/assets/images/spawnTrigger.png" alt="spawnTrigger" style="width:720px;height:450px;">
+          <img src="/assets/images/spawnRadius.png" alt="spawnRadius" style="width:920px;height:450px;">
+        </div>
+        In the 1st image you can see the green box which is the spawn trigger, so once the player walks through there, an editable number of zomies will spawn in 
+        a random location within the red box, seen in the 2nd image.
       </div>
-      <div class="latin-sample">
-        <strong>📖 Additional latin placeholder:</strong><br><br>
-        Mauris turpis nunc, blandit et, volutpat molestie, porta ut, ligula. Fusce pharetra convallis urna. Quisque ut nisi. Donec mi odio, faucibus at, scelerisque quis, convallis in, nisi. Suspendisse non nisl sit amet velit hendrerit rutrum. Ut leo. Ut a nisl id ante tempus hendrerit.
+      <div class="button-group">
+  <a href="index.html" class="back-link">Back to Home</a>
+  <div class="right-buttons">
+    <a href="page8.html" class="nav-btn">Previous</a>
+    <a href="page10.html" class="nav-btn">Next</a>
       </div>
-      <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
+    </div>
     </div>
   </body>
   </html>
