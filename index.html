@@ -87,11 +87,26 @@
   </div>
 </div>
 <script>
-const screenshotFiles = [];
-//change 12 to number of images
-for (let i = 1; i <= 17; i++) {
-  screenshotFiles.push(`/DevDiary/assets/images/${i}.png`);
-}
+const screenshotFiles = [
+  "assets/images/1.png",
+  "assets/images/2.png",
+  "assets/images/3.png",
+  "assets/images/4.png",
+  "assets/images/5.png",
+  "assets/images/6.png",
+  "assets/images/7.png",
+  "assets/images/8.png",
+  "assets/images/9.png",
+  "assets/images/10.png",
+  "assets/images/11.png",
+  "assets/images/12.png",
+  "assets/images/13.png",
+  "assets/images/14.png",
+  "assets/images/15.png",
+  "assets/images/16.png",
+  "assets/images/17.png",
+  "assets/images/18.png"
+];
 
 const marqueeTrack = document.getElementById("marqueeTrack");
 let lastRandomIndex = -1;
@@ -114,8 +129,8 @@ function createImageElement(src) {
   img.loading = "lazy";
   return img;
 }
-//change number to the amount of images you want it to be scrolling through at once
-const numberOfImages = 30;
+
+const numberOfImages = 25;
 
 for (let i = 0; i < numberOfImages; i++) {
   const randomImage = getRandomImage();
@@ -141,7 +156,6 @@ setInterval(() => {
 }, 5000);
 
 let scrollPosition = 0;
-//change scroll speed here (higher=faster)
 const scrollSpeed = 1.5;
 
 function scrollMarquee() {
