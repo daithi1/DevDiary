@@ -1,4 +1,80 @@
-.testModel {
-    width: 40%;
-    height: 40%; 
+body {
+  background: #f0f2f5;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 2rem;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #1a3a4a;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.link-card {
+  flex: 1;
+  min-width: 180px;
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #e0e0e0;
+  transition: 0.2s;
+}
+
+.link-card:hover {
+  background: #eef2f5;
+  border-color: #aaa;
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #1a3a4a;
+}
+
+.card-desc {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@media (max-width: 700px) {
+  .links-grid {
+    flex-direction: column;
+  }
+  .link-card {
+    min-width: auto;
+  }
+  body {
+    padding: 1rem;
+  }
 }
